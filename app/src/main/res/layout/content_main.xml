@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.divan.numbers.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:src="@drawable/facts"
+    android:id="@+id/facts"
+    android:layout_marginTop="27dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/mywidget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/facts"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="14dp"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:isScrollContainer="true"
+        android:keepScreenOn="false"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:text="NumbersAPI..Know the unknown facts abouts numbers.Trivia,Date,Year,Math etc."
+        android:textColor="#4f2ef5"
+        tools:ignore="EllipsizeMaxLines" />
+
+
+    <ImageButton
+        android:id="@+id/trivia"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/facts"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:src="@drawable/trivia" />
+
+
+    <ImageButton
+        android:id="@+id/math"
+        android:layout_width="140dp"
+        android:layout_height="120dp"
+        android:layout_above="@+id/date"
+        android:layout_toEndOf="@+id/date"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:src="@drawable/math" />
+
+    <ImageButton
+        android:layout_width="152dp"
+        android:layout_height="120dp"
+        android:src="@drawable/date"
+        android:layout_marginTop="49dp"
+        android:clickable="true"
+        android:layout_below="@+id/trivia"
+        android:background="@android:color/transparent"
+        android:layout_alignStart="@+id/trivia"
+        android:id="@+id/date" />
+
+    <ImageButton
+        android:layout_width="152dp"
+        android:layout_height="120dp"
+        android:src="@drawable/year"
+        android:clickable="true"
+        android:background="@android:color/transparent"
+        android:id="@+id/year"
+        android:layout_alignTop="@+id/date"
+        android:layout_alignStart="@+id/math" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/date"
+        android:layout_below="@+id/date"
+        android:layout_marginStart="29dp"
+        android:text="Date Facts"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignStart="@+id/year"
+        android:layout_marginStart="40dp"
+        android:text="Year Facts"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trivia Facts"
+        android:textColor="#000"
+        android:gravity="left"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/trivia"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/math"
+        android:text="Math Facts"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        />
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        android:layout_marginBottom="2dp"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/textView4"
+        android:clickable="true"
+        ads:fabSize="mini"
+        ads:srcCompat="@drawable/ic_menu_share"
+        app:backgroundTint="@color/colorAccent" />
+
+
+</RelativeLayout>

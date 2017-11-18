@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.divan.numbers.MailActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView android:layout_height="196dp" android:layout_width="196dp" xmlns:app="http://schemas.android.com/apk/res-auto" app:civ_border_color="#FF000000" android:layout_marginTop="73dp"
+        android:src="@drawable/profile" app:civ_border_width="2dp" android:id="@+id/profile_image"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView android:background="#80ecda3e" android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_marginTop="51dp"
+        android:id="@+id/cnt"
+        android:padding="10dp" android:layout_marginRight="10dp" android:layout_marginLeft="10dp" android:textStyle="bold" android:textSize="20sp"
+        android:text="Reach us at divanshu@xyz.com "
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
